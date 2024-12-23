@@ -1,34 +1,73 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="Style_Sheets/main_styles.css" />
+    <link rel="stylesheet" href="Style_Sheets/cart-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Your Cart</h1>
+      <div class="logo">
+        <a href="index.html">Voie Élégante</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mens.html">Men’s</a></li>
+          <li><a href="womens.html">Women’s</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
     </header>
-    <section id="cart-items">
-        <!-- Cart items will populate here -->
-    </section>
+
+    <section id="cart-items"></section>
+
+    <footer>
+      <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </footer>
+
     <script>
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const cartContainer = document.getElementById('cart-items');
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartContainer = document.getElementById("cart-items");
+
+      function updateCart() {
+        cartContainer.innerHTML = "";
 
         if (cart.length === 0) {
-            cartContainer.innerHTML = '<p>Your cart is empty</p>';
+          cartContainer.innerHTML = "<p>Your cart is empty</p>";
         } else {
-            cart.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" style="width: 100px;">
-                    <h2>${item.name}</h2>
-                    <p>$${item.price}</p>
-                `;
-                cartContainer.appendChild(itemDiv);
-            });
+          cart.forEach((item, index) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.innerHTML = `
+              <img src="${item.image}" alt="${item.name}">
+              <h2>${item.name}</h2>
+              <p>$${item.price}</p>
+              <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+            `;
+            cartContainer.appendChild(itemDiv);
+          });
         }
+      }
+
+      function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart();
+      }
+
+      updateCart();
     </script>
-</body>
+  </body>
 </html>

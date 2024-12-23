@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
-    <link rel="stylesheet" href="product_styles.css" />
+    <link rel="stylesheet" href="Style_Sheets/main_styles.css" />
+    <link rel="stylesheet" href="Style_Sheets/product_styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
       rel="stylesheet"
@@ -12,46 +13,59 @@
   </head>
   <body>
     <header>
-      <div class="logo" ><a href = "index.html">Voie Élégante</a></div>
+      <div class="logo">
+        <a href="index.html">Voie Élégante</a>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="mens.html">Men’s</a></li>
           <li><a href="womens.html">Women’s</a></li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Sale</a></li>
-          <li><a href="#">Cart</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="product-detail">
+      <div class="product-content">
         <img src="" alt="" class="main-image">
-        <h1></h1>
-        <p class="price"></p>
-        <button class="btn">Add to Cart</button>
-    </section>
-    <footer>
-        <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
-        <div class="social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Pinterest</a>
+        <div class="info">
+          <h1></h1>
+          <p class="price"></p>
+          <label for="size">Select Size:</label>
+          <select id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <button class="btn">Add to Cart</button>
         </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pinterest</a>
+      </div>
     </footer>
+
     <script>
-        const product = JSON.parse(localStorage.getItem('selectedProduct'));
-        if (product) {
-            document.querySelector('.main-image').src = product.image;
-            document.querySelector('h1').textContent = product.name;
-            document.querySelector('.price').textContent = `$${product.price}`;
-        }
-        document.querySelector('.btn').addEventListener('click', () => {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push(product);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert('Product added to cart');
-        });
+      const product = JSON.parse(localStorage.getItem('selectedProduct'));
+      if (product) {
+        document.querySelector('.main-image').src = product.image;
+        document.querySelector('h1').textContent = product.name;
+        document.querySelector('.price').textContent = `$${product.price}`;
+      }
+      document.querySelector('.btn').addEventListener('click', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart');
+      });
     </script>
-</body>
+  </body>
 </html>

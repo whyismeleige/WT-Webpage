@@ -1,100 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voie Élégante Women's</title>
-    <link rel="stylesheet" href="women_styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    
+    <link rel="stylesheet" href="Style_Sheets/womens_styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="logo">Voie Élégante</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mens.html">Men’s</a></li>
-                <li><a href="womens.html">Women’s</a></li>
-                <li><a href="new_arrivals.html">New Arrivals</a></li>
-                <li><a href="sale.html">Sale</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+      <div class="logo"><a href="index.html">Voie Élégante</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mens.html">Men’s</a></li>
+          <li><a href="womens.html">Women’s</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>Women's Luxury Footwear Collection</h1>
-            <p>Discover timeless designs and unmatched quality for every occasion.</p>
-        </div>
+      <div class="hero-text">
+        <h1>Women's Luxury Footwear Collection</h1>
+        <p>
+          Discover timeless designs and unmatched quality for every occasion.
+        </p>
+      </div>
     </section>
 
     <section class="filter-section">
-        <div class="container">
-            <h2>Filter by</h2>
-            <form action="#">
-                <label for="brand">Brand:</label>
-                <select id="brand" name="brand">
-                    <option value="all">All</option>
-                    <option value="brand1">Brand 1</option>
-                    <option value="brand2">Brand 2</option>
-                    <option value="brand3">Brand 3</option>
-                </select>
+      <div class="container">
+        <h2>Filter by</h2>
+        <form action="#">
+          <label for="brand">Brand:</label>
+          <select id="brand" name="brand">
+            <option value="all">All</option>
+            <option value="brand1">Brand 1</option>
+            <option value="brand2">Brand 2</option>
+            <option value="brand3">Brand 3</option>
+          </select>
 
-                <label for="price">Price:</label>
-                <select id="price" name="price">
-                    <option value="all">All</option>
-                    <option value="low">Below $300</option>
-                    <option value="medium">$300 - $600</option>
-                    <option value="high">Above $600</option>
-                </select>
+          <label for="price">Price:</label>
+          <select id="price" name="price">
+            <option value="all">All</option>
+            <option value="low">Below $300</option>
+            <option value="medium">$300 - $600</option>
+            <option value="high">Above $600</option>
+          </select>
 
-                <button type="submit" class="btn">Apply Filters</button>
-            </form>
-        </div>
+          <button type="submit" class="btn">Apply Filters</button>
+        </form>
+      </div>
     </section>
 
     <section class="featured">
-        <h2>Featured Women's Shoes</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="Images/Women/Exclusive_Stilletto_Heels.png" alt="Exclusive Stiletto Heels">
-                <h3>Exclusive Stiletto Heels</h3>
-                <p>$499</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Women/Luxury_Leather_Sandals.png" alt="Luxury Leather Sandals">
-                <h3>Luxury Leather Sandals</h3>
-                <p>$350</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Women/Velvet_Evening_Flats.png" alt="Velvet Evening Flats">
-                <h3>Velvet Evening Flats</h3>
-                <p>$450</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Women/Sophisticated_Platform_Pumps.png" alt="Sophisticated Platform Pumps">
-                <h3>Sophisticated Platform Pumps</h3>
-                <p>$600</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
+      <h2>Featured Women's Shoes</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img
+            src="Images/Women/Exclusive_Stilletto_Heels.png"
+            alt="Exclusive Stiletto Heels"
+          />
+          <h3>Stiletto Heels</h3>
+          <p>$499</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Stiletto Heels"
+            data-price="499"
+            data-image="Images/Women/Exclusive_Stilletto_Heels.png"
+            >View Product</a
+          >
         </div>
+        <div class="product-card">
+          <img
+            src="Images/Women/Luxury_Leather_Sandals.png"
+            alt="Luxury Leather Sandals"
+          />
+          <h3>Leather Sandals</h3>
+          <p>$350</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Leather Sandals"
+            data-price="350"
+            data-image="Images/Women/Luxury_Leather_Sandals.png"
+            >View Product</a
+          >
+        </div>
+        <div class="product-card">
+          <img
+            src="Images/Women/Velvet_Evening_Flats.png"
+            alt="Velvet Evening Flats"
+          />
+          <h3>Velvet Evening Flats</h3>
+          <p>$450</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Velvet Evening Flats"
+            data-price="450"
+            data-image="Images/Women/Velvet_Evening_Flats.png"
+            >View Product</a
+          >
+        </div>
+        <div class="product-card">
+          <img
+            src="Images/Women/Sophisticated_Platform_Pumps.png"
+            alt="Sophisticated Platform Pumps"
+          />
+          <h3>Platform Pumps</h3>
+          <p>$600</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Platform Pumps"
+            data-price="600"
+            data-image="Images/Women/Sophisticated_Platform_Pumps.png"
+            >View Product</a
+          >
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
-        <div class="social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Pinterest</a>
-        </div>
+      <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pinterest</a>
+      </div>
     </footer>
-
-</body>
-<script src="scripts.js"></script>
+  </body>
+  <script src="scripts.js"></script>
 </html>

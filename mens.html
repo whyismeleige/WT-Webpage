@@ -1,100 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voie Élégante Men's</title>
-    <link rel="stylesheet" href="mens_styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  
+    <link rel="stylesheet" href="Style_Sheets/mens_styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="logo">Voie Élégante</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mens.html">Men’s</a></li>
-                <li><a href="womens.html">Women’s</a></li>
-                <li><a href="new_arrivals.html">New Arrivals</a></li>
-                <li><a href="sale.html">Sale</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+      <div class="logo"><a href="index.html"> Voie Élégante </a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mens.html">Men’s</a></li>
+          <li><a href="womens.html">Women’s</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>Men's Luxury Footwear Collection</h1>
-            <p>Explore the finest handcrafted shoes designed for comfort and style.</p>
-        </div>
+      <div class="hero-text">
+        <h1>Men's Luxury Footwear Collection</h1>
+        <p>
+          Explore the finest handcrafted shoes designed for comfort and style.
+        </p>
+      </div>
     </section>
 
     <section class="filter-section">
-        <div class="container">
-            <h2>Filter by</h2>
-            <form action="#">
-                <label for="brand">Brand:</label>
-                <select id="brand" name="brand">
-                    <option value="all">All</option>
-                    <option value="brand1">Brand 1</option>
-                    <option value="brand2">Brand 2</option>
-                    <option value="brand3">Brand 3</option>
-                </select>
+      <div class="container">
+        <h2>Filter by</h2>
+        <form action="#">
+          <label for="brand">Brand:</label>
+          <select id="brand" name="brand">
+            <option value="all">All</option>
+            <option value="brand1">Sneakers</option>
+            <option value="brand2">Boots</option>
+            <option value="brand3">Formal Shoes</option>
+          </select>
 
-                <label for="price">Price:</label>
-                <select id="price" name="price">
-                    <option value="all">All</option>
-                    <option value="low">Below $300</option>
-                    <option value="medium">$300 - $600</option>
-                    <option value="high">Above $600</option>
-                </select>
+          <label for="price">Price:</label>
+          <select id="price" name="price">
+            <option value="all">All</option>
+            <option value="low">Below $300</option>
+            <option value="medium">$300 - $600</option>
+            <option value="high">Above $600</option>
+          </select>
 
-                <button type="submit" class="btn">Apply Filters</button>
-            </form>
-        </div>
+          <button type="submit" class="btn">Apply Filters</button>
+        </form>
+      </div>
     </section>
 
     <section class="featured">
-        <h2>Featured Men's Shoes</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="Images/Men/Luxury_leather_sneakers.png" alt="Luxury Leather Sneakers">
-                <h3>Luxury Leather Sneakers</h3>
-                <p>$399</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Men/Exclusive_Leather_Loafers.png" alt="Exclusive Leather Loafers">
-                <h3>Exclusive Leather Loafers</h3>
-                <p>$550</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Men/Premium_Suede_Boots_Men.png" alt="Premium Suede Boots">
-                <h3>Premium Suede Boots</h3>
-                <p>$450</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
-            <div class="product-card">
-                <img src="Images/Men/Classic_Oxfords.png" alt="Classic Black Oxfords">
-                <h3>Classic Black Oxfords</h3>
-                <p>$600</p>
-                <a href="product.html" class="btn">View Product</a>
-            </div>
+      <h2>Featured Men's Shoes</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img
+            src="Images/Men/Luxury_leather_sneakers.png"
+            alt="Luxury Leather Sneakers"
+          />
+          <h3>Brown Leather Sneakers</h3>
+          <p>$399</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Brown Leather Sneakers"
+            data-price="399"
+            data-image="Images/Men/Luxury_leather_sneakers.png"
+            >View Product</a
+          >
         </div>
+        <div class="product-card">
+          <img
+            src="Images/Men/Exclusive_Leather_Loafers.png"
+            alt="Exclusive Leather Loafers"
+          />
+          <h3>Black Leather Loafers</h3>
+          <p>$550</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Black Leather Loafers"
+            data-price="550"
+            data-image="Images/Men/Exclusive_Leather_Loafers.png"
+            >View Product</a
+          >
+        </div>
+        <div class="product-card">
+          <img
+            src="Images/Men/Premium_Suede_Boots_Men.png"
+            alt="Premium Suede Boots"
+          />
+          <h3>Suede Boots</h3>
+          <p>$450</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Suede Boots"
+            data-price="450"
+            data-image="Images/Men/Premium_Suede_Boots_Men.png"
+            >View Product</a
+          >
+        </div>
+        <div class="product-card">
+          <img
+            src="Images/Men/Classic_Oxfords.png"
+            alt="Classic Black Oxfords"
+          />
+          <h3>Classic Black Oxfords</h3>
+          <p>$600</p>
+          <a
+            href="product.html"
+            class="btn"
+            data-name="Classic Black Oxfords"
+            data-price="600"
+            data-image="Images/Men/Classic_Oxfords.png"
+            >View Product</a
+          >
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
-        <div class="social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Pinterest</a>
-        </div>
+      <p>&copy; 2024 Voie Élégante. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pinterest</a>
+      </div>
     </footer>
-
-</body>
-<script src="scripts.js"></script>
+  </body>
+  <script src="scripts.js"></script>
 </html>
